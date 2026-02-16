@@ -3,81 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT Profil | Jaroslav Švejda</title>
-    <style>
-        :root {
-            --primary: #00d4ff;
-            --bg: #0f172a;
-            --card: #1e293b;
-            --text: #f8fafc;
-        }
-        body { 
-            font-family: 'Segoe UI', Roboto, sans-serif; 
-            background-color: var(--bg); 
-            color: var(--text); 
-            margin: 0; 
-            display: flex; 
-            justify-content: center; 
-            padding: 40px 20px;
-        }
-        .container { max-width: 700px; width: 100%; }
-        header { 
-            text-align: center; 
-            padding: 40px; 
-            background: linear-gradient(135deg, #00d4ff 0%, #0077b5 100%); 
-            border-radius: 20px; 
-            margin-bottom: 30px; 
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-        }
-        h1 { margin: 0; font-size: 2.5em; text-transform: uppercase; letter-spacing: 2px; }
-        .tagline { opacity: 0.9; font-weight: 300; }
-        section { 
-            background: var(--card); 
-            padding: 25px; 
-            border-radius: 15px; 
-            margin-bottom: 20px; 
-            border-left: 5px solid var(--primary);
-            transition: transform 0.3s ease;
-        }
-        section:hover { transform: translateY(-5px); }
-        h2 { color: var(--primary); margin-top: 0; display: flex; align-items: center; }
-        ul { list-style: none; padding: 0; }
-        li { margin-bottom: 10px; display: flex; align-items: center; }
-        li::before { content: "▹"; color: var(--primary); margin-right: 10px; font-weight: bold; }
-        .badge { 
-            background: #334155; 
-            padding: 5px 12px; 
-            border-radius: 20px; 
-            font-size: 0.85em; 
-            border: 1px solid var(--primary);
-            margin-right: 5px;
-        }
-    </style>
+    <title>Osobní IT Profil | Jaroslav Švejda</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Jaroslav Švejda</h1> <p class="tagline">Student IT & Sportovec tělem i duší</p>
+            <h1 id="name">Načítání...</h1>
+            <p id="tagline" class="tagline"></p>
         </header>
 
-        <section>
-            <h2>Kdo jsem</h2>
-            <p>Jsem student IT, který věří, že disciplína z fotbalového hřiště se dá skvěle přenést do světa technologií.  Když zrovna nesedím u počítače, najdete mě na kole nebo na trávníku v dresu Bělčic.</p>
+        <section id="skills-section">
+            <h2>Dovednosti & Znalosti</h2>
+            <ul id="skills"></ul>
         </section>
 
-        <section>
-            <h2>Co mě baví & umím</h2> <div>
-                <span class="badge">Matematika</span>
-                <span class="badge">PC systémy</span>
-                <span class="badge">PC sítě</span>
-                <span class="badge">Tělocvik</span>
-            </div>
-            <p style="margin-top: 15px;">Mám rád logiku čísel a fascinuje mě, jak fungují počítačové systémy a jejich propojení.</p>
+        <section id="interests-section">
+            <h2>Moje Zájmy</h2>
+            <ul id="interests"></ul>
         </section>
 
-        <section>
-            <h2>Kam směřuji</h2> <p>Mým cílem je hlouběji proniknout do světa <strong>počítačových sítí</strong> a jednou se jim věnovat profesionálně. Chci stavět a spravovat infrastrukturu, která drží digitální svět pohromadě.</p>
+        <section id="projects-section">
+            <h2>Moje Projekty</h2>
+            <div id="projects"></div>
         </section>
     </div>
+
+    <script src="app.js"></script>
 </body>
 </html>

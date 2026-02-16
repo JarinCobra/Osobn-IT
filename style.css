@@ -1,0 +1,403 @@
+/* ==================== PROMĚNNÉ CSS ==================== */
+:root {
+  --primary-tech: #00d4ff;      /* Modrá - technologie */
+  --primary-sport: #22c55e;     /* Zelená - fotbal/trávník */
+  --secondary: #0369a1;         /* Tmavší modrá */
+  --bg: #0f172a;                /* Tmavé pozadí */
+  --bg-light: #1a2942;          /* Světlejší pozadí */
+  --card: #1e293b;              /* Barva karet */
+  --card-hover: #334155;        /* Hover efekt na kartách */
+  --text: #f8fafc;              /* Bílý text */
+  --text-muted: #cbd5e1;        /* Šedivý text */
+  --border-radius: 15px;
+  --transition: all 0.3s ease;
+}
+
+/* ==================== ZÁKLADNÍ STYLY ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  background: linear-gradient(135deg, var(--bg) 0%, var(--bg-light) 100%);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+/* ==================== HEADER ==================== */
+header {
+  text-align: center;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, var(--primary-sport) 0%, var(--primary-tech) 100%);
+  border-radius: var(--border-radius);
+  margin-bottom: 40px;
+  box-shadow: 0 15px 40px rgba(34, 197, 94, 0.25);
+  animation: slideDown 0.6s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+header::before {
+  content: "⚽";
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  font-size: 120px;
+  opacity: 0.1;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1#name {
+  font-size: 3em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.tagline {
+  font-size: 1.2em;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.95);
+  letter-spacing: 0.5px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ==================== SEKCE - DOVEDNOSTI ==================== */
+#skills-section {
+  background: var(--card);
+  padding: 35px;
+  border-radius: var(--border-radius);
+  margin-bottom: 30px;
+  border-left: 5px solid var(--primary-tech);
+  border-top: 3px solid var(--primary-tech);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  transition: var(--transition);
+}
+
+#skills-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.15);
+}
+
+#skills-section h2 {
+  color: var(--primary-tech);
+  font-size: 1.8em;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#skills-section h2::before {
+  content: "💻";
+  font-size: 1.3em;
+}
+
+#skills {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+#skills li {
+  background: var(--card-hover);
+  padding: 12px 16px;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-tech);
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#skills li:hover {
+  background: var(--primary-tech);
+  color: var(--bg);
+  transform: translateX(8px);
+  font-weight: 600;
+}
+
+#skills li::before {
+  content: "▹";
+  color: var(--primary-tech);
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+#skills li:hover::before {
+  color: var(--bg);
+}
+
+/* ==================== SEKCE - ZÁJMY ==================== */
+#interests-section {
+  background: var(--card);
+  padding: 35px;
+  border-radius: var(--border-radius);
+  margin-bottom: 30px;
+  border-left: 5px solid var(--primary-sport);
+  border-top: 3px solid var(--primary-sport);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  transition: var(--transition);
+}
+
+#interests-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(34, 197, 94, 0.15);
+}
+
+#interests-section h2 {
+  color: var(--primary-sport);
+  font-size: 1.8em;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#interests-section h2::before {
+  content: "⚽";
+  font-size: 1.3em;
+}
+
+#interests {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+#interests li {
+  background: var(--card-hover);
+  padding: 12px 16px;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-sport);
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#interests li:hover {
+  background: var(--primary-sport);
+  color: var(--bg);
+  transform: translateX(8px);
+  font-weight: 600;
+}
+
+#interests li::before {
+  content: "●";
+  color: var(--primary-sport);
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+#interests li:hover::before {
+  color: var(--bg);
+}
+
+/* ==================== SEKCE - PROJEKTY ==================== */
+#projects-section {
+  background: var(--card);
+  padding: 35px;
+  border-radius: var(--border-radius);
+  border-left: 5px solid var(--secondary);
+  border-top: 3px solid var(--secondary);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  transition: var(--transition);
+}
+
+#projects-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(3, 105, 161, 0.15);
+}
+
+#projects-section h2 {
+  color: var(--secondary);
+  font-size: 1.8em;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#projects-section h2::before {
+  content: "🎬";
+  font-size: 1.3em;
+}
+
+#projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: var(--card-hover);
+  padding: 25px;
+  border-radius: 10px;
+  border-top: 4px solid var(--secondary);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(3, 105, 161, 0.2);
+  background: #475569;
+}
+
+.project-card h3 {
+  color: var(--primary-tech);
+  font-size: 1.3em;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.project-card p {
+  color: var(--text-muted);
+  margin-bottom: 15px;
+  flex-grow: 1;
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+.project-link {
+  color: var(--secondary);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: var(--transition);
+  padding: 8px 0;
+  align-self: flex-start;
+}
+
+.project-link:hover {
+  color: var(--primary-sport);
+  transform: translateX(5px);
+}
+
+/* ==================== CHYBOVÁ ZPRÁVA ==================== */
+.error-message {
+  background: #dc2626;
+  color: white;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 10px 25px rgba(220, 38, 38, 0.3);
+  animation: slideDown 0.4s ease;
+}
+
+/* ==================== RESPONZIVITA ==================== */
+@media (max-width: 768px) {
+  h1#name {
+    font-size: 2em;
+    letter-spacing: 2px;
+  }
+
+  .tagline {
+    font-size: 1em;
+  }
+
+  header {
+    padding: 40px 25px;
+    margin-bottom: 25px;
+  }
+
+  header::before {
+    font-size: 80px;
+  }
+
+  #skills-section,
+  #interests-section,
+  #projects-section {
+    padding: 20px;
+  }
+
+  #skills,
+  #interests {
+    grid-template-columns: 1fr;
+  }
+
+  #projects {
+    grid-template-columns: 1fr;
+  }
+
+  #skills-section h2,
+  #interests-section h2,
+  #projects-section h2 {
+    font-size: 1.4em;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  h1#name {
+    font-size: 1.5em;
+    letter-spacing: 1px;
+  }
+
+  header {
+    padding: 25px 15px;
+    border-radius: 10px;
+  }
+
+  header::before {
+    font-size: 60px;
+    top: -15px;
+    right: -15px;
+  }
+
+  #skills-section,
+  #interests-section,
+  #projects-section {
+    border-radius: 10px;
+    padding: 15px;
+  }
+
+  .project-card {
+    border-radius: 8px;
+    padding: 15px;
+  }
+
+  #skills-section h2,
+  #interests-section h2,
+  #projects-section h2 {
+    font-size: 1.2em;
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Jaroslav Švejda",
+  "tagline": "Student IT & Sportovec tělem i duší",
+  "skills": [
+    "Správa počítačových sítí",
+    "Správa systémových infrastruktur",
+    "HTML5 & CSS3",
+    "Digitální střih videa",
+    "Postprodukce videa",
+    "Grafický design",
+    "Vizuální komunikace",
+    "JavaScript & WebDevelopment"
+  ],
+  "interests": [
+    "Aktivní fotbal – hráč TJ Sokol Bělčice",
+    "Počítačové sítě a infrastruktura",
+    "Moderní hardware a technologie",
+    "Sportovní diagnostika",
+    "Kreativní video tvorba"
+  ],
+  "projects": [
+    {
+      "title": "Design dárkových poukazů",
+      "description": "Návrh a realizace grafických materiálů pro rodinné účely. Tvorba profesionálních poukazů na jízdy ve sportovních vozech s vizuálním designem.",
+      "link": "#"
+    },
+    {
+      "title": "Video tvorba a editace",
+      "description": "Experimentální střih a úprava krátkých videosekvencí. Práce s postprodukcí, barevnou korekcí a efekty.",
+      "link": "#"
+    }
+  ]
+}
