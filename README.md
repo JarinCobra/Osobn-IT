@@ -15,3 +15,5 @@ Tento projekt je dynamická webová aplikace, která slouží jako můj osobní 
 ## 👤 O mně
 * **Dovednosti**: Zaměřuji se na počítačové sítě, systémy a digitální střih videa.
 * **Zájmy**: Aktivně hraji fotbal za tým TJ Sokol Bělčice a zajímám se o moderní hardware.
+
+test
